@@ -268,7 +268,7 @@ header nav ul li a{
         height:160px;
         border-radius: 90px 100px 80px 90px;
         background: var(--c-counter);
-        transform: translate(-120px, -50px);
+        transform: translate(-50px, -20px);
         filter: blur(70px);   
         opacity: 90%;
     }
@@ -276,6 +276,7 @@ header nav ul li a{
     
 
 .cheader{
+    border-top-right-radius: 10px;
     background-color: #252526;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -304,6 +305,7 @@ header nav ul li a{
 }
 
 .cmenu{
+    border-top-left-radius: 10px;
     background-color: #333333;
     grid-column: 1/2;
     grid-row: 1/3;
@@ -315,6 +317,7 @@ header nav ul li a{
 }
 
 .cmenu img:first-child{
+    margin-top: 10px;
     border-left: 2px solid white;
 }
 
@@ -353,11 +356,12 @@ header nav ul li a{
 
 .about .info{
     width: 800px;
-    height: 590px;
+    height: 630px;
     align-self: center;
     justify-self: center;
     padding: 10px;
 }
+
 .about .info h1 {
     font-weight: 400;
     font-size: 45px;
@@ -371,10 +375,51 @@ header nav ul li a{
     background: var(--c-blue);
 }
 
+.about .info h2{
+    margin-top: 15px;
+    font-weight: 400;
+}
+
 .about .info p {
     font-size: 20px;
     margin-top: 25px;
 }
+
+/* Projects */
+.projects h1 {
+    font-weight: 400;
+    font-size: 45px;
+}
+.projects h1::after{
+    content: "";
+    width: 90px;
+    height: 5px;
+    position: absolute;
+    transform: translate(-219px, 60px);
+    background: var(--c-blue);
+}
+
+
+
+/* skills */
+
+
+.skills h1 {
+    font-weight: 400;
+    font-size: 45px;
+}
+.skills h1::after{
+    content: "";
+    width: 65px;
+    height: 5px;
+    position: absolute;
+    transform: translate(-112px, 60px);
+    background: var(--c-blue);
+}
+
+
+
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -405,4 +450,29 @@ header nav ul li a{
     100% {
         transform: translateY(-0%);
     }
+}
+
+
+/* Top button */
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#topButton img{
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}  
+#topButton:active {
+    transform: scale(0.95);
 }
