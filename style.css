@@ -647,6 +647,9 @@ header nav ul li a{
     .home{
         margin-top: -70px;
     }
+    .home .bottomLinks{
+        display: block;
+    }
     .home .box{
         width: fit-content;
         transform: scale(0.5);
