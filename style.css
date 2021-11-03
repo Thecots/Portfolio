@@ -543,13 +543,50 @@ header nav ul li a{
 
 /* Media queries */
 
+@media (max-width: 1590px) {
+    /* about */
+    .about{
+        display: flex;
+        gap: 0;
+    }
+    .about .code, .about .info{
+        transform: scale(0.9);
+    }
+    .about .code{
+        min-width: 600px;
+    }
+  }
+
+
 @media (max-width: 1300px) {
     /* home */
     .home .box{
         transform: scale(0.8);
     }
-
   }
+
+  @media (max-width: 1040px) {
+    .about{
+        height: fit-content;
+        flex-direction: column-reverse;
+        
+      }
+    .about .code, .about .info{
+        transform: scale(0.9);
+    }
+    .about .info{
+        float: left;
+        left: 0;
+        height: fit-content;
+        align-self: start;
+        margin-bottom: 20px;
+        width: 100%;
+        font-size: 14px;
+    }
+    .about .code{
+        margin-top: 20px;
+    }
+    }
 
   @media (max-width: 1000px) {
     /* home */
@@ -563,12 +600,39 @@ header nav ul li a{
     .home .box{
       transform: scale(0.6);
     }
+    .home .bottomLinks a svg{
+        width: 30px;
+    }
   }
 
   @media (max-width: 720px) {
+    /* header */
+    header .container nav ul li a{
+        font-size: 18px;
+    }
     /* home */
     .home .box{
-      transform: scale(0.45);
+      transform: scale(0.50);
+    }
+    .home .bottomLinks a svg{
+        width: 28px;
+    }
+
+  
+  }
+
+  @media (max-width: 625px) {
+        /* about */
+    .about .code, .about .info{
+        transform: scale(0.7);
+    }
+    .about .info{
+        max-width: 100%;
+        width: 1000px;
+    }
+    .about .code{
+        margin-top: -50px;
+        width: 100%;
     }
   }
 
@@ -581,7 +645,6 @@ header nav ul li a{
         display: none;
     }
     .home{
-        background-color: red;
     }
     .home .box{
         width: fit-content;
@@ -620,6 +683,39 @@ header nav ul li a{
         }
         .home .box .text{
             transform: scale(1.2);
+        }
+        .home .box .text a{
+            transform: scale(1.2) translateX(20px);
+        }
+  }
+
+  @media (max-width: 445px) {
+        /* about */
+        .about .code, .about .info{
+            transform: scale(0.5);
+        }
+        .about .info{
+            max-width: 100%;
+            width: 1000px;
+        }
+        .about .code{
+            margin-top: -180px;
+            width: 100%;
+        }
+  }
+
+  @media (max-width:380px) {
+    .home .box{
+        transform: scale(0.5);
+          flex-direction: column-reverse;
+          gap: 0px;
+        }
+        .home .box .img{
+            transform: scale(1.1);
+            margin-bottom: 120px;
+        }
+        .home .box .text{
+            transform: scale(0.98);
         }
         .home .box .text a{
             transform: scale(1.2) translateX(20px);
