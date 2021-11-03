@@ -637,6 +637,10 @@ header nav ul li a{
   }
 
   @media (max-width: 570px) {
+    .home .bottomLinks{
+        position: relative;
+        margin-top: 25px;
+    }
     body{
         overflow-x: hidden;
     }
@@ -647,9 +651,7 @@ header nav ul li a{
     .home{
         margin-top: -70px;
     }
-    .home .bottomLinks{
-        display: block;
-    }
+
     .home .box{
         width: fit-content;
         transform: scale(0.5);
