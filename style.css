@@ -22,6 +22,7 @@ body{
 }
 
 main{
+    max-width: 100%;
     width: 1500px;
     margin: 0 auto;
 }
@@ -29,7 +30,7 @@ main{
 
 /* global */
 .home, .about, .projects, .skills{
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     padding-top: 55px;
 }
@@ -96,6 +97,7 @@ header nav ul li a{
     flex-direction: column;
 }
 .home .box{
+    max-width: 100%;
     width: 1200px;
     height: 500px;
     display: flex;
@@ -188,6 +190,7 @@ header nav ul li a{
         transform: scale(0.96);
     }
 .home .box .img{
+    max-width: 100%;
     width: 500px;
     height: 500px;
     display: flex;
@@ -402,9 +405,17 @@ header nav ul li a{
 
 
 /* skills */
-
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .skills h1 {
+    position: absolute;
+    top: 55px;
+    left: 0;
     font-weight: 400;
     font-size: 45px;
 }
@@ -417,8 +428,18 @@ header nav ul li a{
     background: var(--c-blue);
 }
 
+.skills .skillBox img{
+    width: 100px;
+}
 
-
+.skills .skillBox{
+    max-width: 100%;
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
 
 
 /* width */
@@ -502,3 +523,26 @@ header nav ul li a{
 .p-l-6{
     padding-left: 60px;
 }
+
+
+
+
+/* Media queries */
+
+@media (max-width: 1300px) {
+    .home {
+      transform: scale(0.8);
+    }
+  }
+
+  @media (max-width: 995px) {
+    .home {
+      transform: scale(0.7);
+    }
+  }
+
+  @media (max-width: 850px) {
+    .home {
+      transform: scale(0.55);
+    }
+  }
