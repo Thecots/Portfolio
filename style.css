@@ -580,9 +580,12 @@ header nav ul li a{
     header{
         display: none;
     }
-
+    .home{
+        background-color: red;
+    }
     .home .box{
-    transform: scale(0.5);
+        width: fit-content;
+        transform: scale(0.5);
       flex-direction: column-reverse;
       gap: 0px;
     }
