@@ -645,6 +645,7 @@ header nav ul li a{
         display: none;
     }
     .home{
+        margin-top: -70px;
     }
     .home .box{
         width: fit-content;
