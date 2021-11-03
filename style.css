@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: 'Montserrat',sans-serif;
     scroll-behavior: smooth;
-
 }
 
 :root{
@@ -69,11 +68,11 @@ header .container a{
     font-size: 20px;
     padding: 3px;
     cursor: pointer;
+    transition: transform 0.1s ease;
 }
-
-header .container a span:last-child{
-    color: var(--c-blue);
-}
+    header .container a span:last-child{
+        color: var(--c-blue);
+    }
 
 header nav ul{
     list-style: none;
@@ -97,7 +96,6 @@ header nav ul li a{
     flex-direction: column;
 }
 .home .box{
-    max-width: 100%;
     width: 1200px;
     height: 500px;
     display: flex;
@@ -499,7 +497,23 @@ header nav ul li a{
     transform: scale(0.95);
 }
 
+.fixedbtn{
+    display: block !important;
+    animation: btnTop ease 0.4s;
+}
 
+@keyframes btnTop {
+    0%{
+        transform: translateY(10px);
+        opacity: 25%;
+    }50%{
+        opacity: 100%;
+    }100%{
+        transform: translateY(0px);
+    }
+}
+
+/* Visual Colors */
 .c-w{
     color: white;
 }
@@ -530,19 +544,81 @@ header nav ul li a{
 /* Media queries */
 
 @media (max-width: 1300px) {
-    .home {
-      transform: scale(0.8);
+    /* home */
+    .home .box{
+        transform: scale(0.8);
     }
+
   }
 
-  @media (max-width: 995px) {
-    .home {
-      transform: scale(0.7);
+  @media (max-width: 1000px) {
+    /* home */
+    .home .box{
+        transform: scale(0.7);
     }
   }
 
   @media (max-width: 850px) {
-    .home {
-      transform: scale(0.55);
+    /* home */
+    .home .box{
+      transform: scale(0.6);
     }
+  }
+
+  @media (max-width: 720px) {
+    /* home */
+    .home .box{
+      transform: scale(0.45);
+    }
+  }
+
+  @media (max-width: 570px) {
+    body{
+        overflow-x: hidden;
+    }
+    /* home */
+    header{
+        display: none;
+    }
+
+    .home .box{
+    transform: scale(0.5);
+      flex-direction: column-reverse;
+      gap: 0px;
+    }
+    .home .box .img{
+        transform: scale(1.2);
+        margin-bottom: 300px;
+    }
+    .home .box .text{
+        transform: scale(1.5);
+    }
+        .home .box .text::after{
+            width: 250px;
+            height:120px;
+            transform: translate(255px, -720px);
+        }
+        .home .box .text::before{
+            width: 250px;
+            height:120px;
+            transform: translate(-95px, 40px);
+        }
+  }
+
+  @media (max-width:490px) {
+    .home .box{
+        transform: scale(0.5);
+          flex-direction: column-reverse;
+          gap: 0px;
+        }
+        .home .box .img{
+            transform: scale(1.1);
+            margin-bottom: 120px;
+        }
+        .home .box .text{
+            transform: scale(1.2);
+        }
+        .home .box .text a{
+            transform: scale(1.2) translateX(20px);
+        }
   }

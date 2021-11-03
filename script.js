@@ -1,7 +1,4 @@
-var topButton = document.getElementById("topButton");
-
-
-// header Fixed
+// scroll header & go to top button
 window.onscroll = function() {
     const docScrollTop = document.documentElement.scrollTop;
     
@@ -14,16 +11,17 @@ window.onscroll = function() {
         }
     }
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        topButton.style.display = "block";
+      console.log('asd');
+        document.querySelector("#topButton").classList.add("fixedbtn");
       } else {
-        topButton.style.display = "none";
+        document.querySelector("#topButton").classList.remove("fixedbtn");
       }
 };
 
 
 
 
-// When the user clicks on the button, scroll to the top of the document
+// go to top button action
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
