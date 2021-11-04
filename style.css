@@ -758,6 +758,8 @@ header nav ul li a{
     .home .box .img{
         transform: scale(1.2);
         margin-bottom: 300px;
+        margin: 120px;
+        padding-top: 50px;
     }
     .home .box .text{
         transform: scale(1.5);
@@ -783,6 +785,7 @@ header nav ul li a{
         .home .box .img{
             transform: scale(1.1);
             margin-bottom: 120px;
+            margin-top: 199px;
         }
         .home .box .text{
             transform: scale(1.2);
