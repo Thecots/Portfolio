@@ -166,6 +166,7 @@ header nav ul li a{
 }
 
 .home .box .text .links a{
+    text-decoration: none;
     position: absolute;
     text-decoration: none;
     width: fit-content;
@@ -206,6 +207,7 @@ header nav ul li a{
     box-shadow: 0px 5px 100px #1f71eb17;
     background: var(--c-white);
     z-index: 5;
+    filter: grayscale(0.7);
 }
     .home .box .img::after{
         user-select: none;
@@ -426,20 +428,36 @@ header nav ul li a{
     background: var(--c-blue);
 }
 
-.skills .skillBox img{
-    width: 100px;
-}
-
-.skills .skillBox{
-    max-width: 100%;
-    width: 1300px;
+.skillBox{
     display: flex;
     justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+.skillBox div{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    gap: 15px;
+    cursor: pointer;
+    background-color: rgb(56, 56, 56);
+    border-radius: 5px;
+    color: white;
+}
+.skillBox div h3{
+    font-weight: 600;
+}
+.skillBox div p{
+    font-size: 15px;
 }
 
-
+.skillBox img{
+    width: 80px;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
@@ -595,6 +613,15 @@ header nav ul li a{
     }
   }
 
+
+  @media (max-width: 888px) {
+    /* skills */
+    .skillBox{
+        margin-top: 30px;
+        transform: scale(0.85);
+    }
+  }
+
   @media (max-width: 850px) {
     /* home */
     .home .box{
@@ -602,6 +629,14 @@ header nav ul li a{
     }
     .home .bottomLinks a svg{
         width: 30px;
+    }
+
+    /* skills */
+    .skills{
+        height: fit-content;
+    }
+    .skillBox{
+        height: fit-content ;
     }
   }
 
@@ -618,7 +653,9 @@ header nav ul li a{
         width: 28px;
     }
 
-  
+    .skills h1{
+            transform: scale(0.8);
+    }
   }
 
   @media (max-width: 625px) {
@@ -637,9 +674,15 @@ header nav ul li a{
   }
 
   @media (max-width: 570px) {
+      .skills h1{
+          transform: scale(0.8);
+      }
+      .skillBox{
+      margin-top: -10px;
+  }
     .home .bottomLinks{
         position: relative;
-        margin-top: 25px;
+        margin-top: 105px;
     }
     body{
         overflow-x: hidden;
@@ -650,6 +693,7 @@ header nav ul li a{
     }
     .home{
         margin-top: -70px;
+        height: fit-content;
     }
 
     .home .box{
@@ -703,6 +747,7 @@ header nav ul li a{
         .about .info{
             max-width: 100%;
             width: 1000px;
+            transform: scale(0.7);
         }
         .about .code{
             margin-top: -180px;
@@ -711,6 +756,9 @@ header nav ul li a{
   }
 
   @media (max-width:380px) {
+      .home .bottomLinks{
+        margin-top: 24px;
+      }
     .home .box{
         transform: scale(0.5);
           flex-direction: column-reverse;
