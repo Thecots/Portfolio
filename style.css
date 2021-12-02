@@ -831,3 +831,42 @@ header nav ul li a{
             transform: scale(1.2) translateX(20px);
         }
   }
+
+  /* copy */
+  .copyMessage{
+      position: fixed;
+      opacity: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      background-color: var(--c-blue);
+      color: white;
+  }
+  .copyMessage h1{
+      font-size: 20px;
+      padding: 15px 45px;
+      border-radius: 3px;
+  }
+
+  .copya{
+      animation: 2s copy;
+  }
+
+  @keyframes copy {
+      0%{
+        opacity: 100%;
+        bottom: -50px;
+      }
+      30%{
+        bottom: 10px;
+      }
+      90%{
+          bottom: 10px;
+          opacity: 100%;
+      }
+      100%{
+          bottom: -50px;
+          opacity: 0%;
+      }
+
+  }

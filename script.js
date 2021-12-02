@@ -19,7 +19,14 @@ window.onscroll = function() {
 };
 
 
+document.querySelector("#email").addEventListener('click',() => {
+  navigator.clipboard.writeText("thecots22@gmail.com")
+  document.querySelector(".copyMessage").classList.add("copya");
+  setTimeout(() => {
+    document.querySelector(".copyMessage").classList.remove("copya");
+  },2000);
 
+})
 
 // go to top button action
 function topFunction() {
